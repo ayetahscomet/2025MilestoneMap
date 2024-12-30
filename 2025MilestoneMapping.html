@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Milestone Map</title>
+    <link rel="stylesheet" href="2025MilestoneMapping.css">
+</head>
+<body>
+    <header>
+        <h1>2025 MILESTONE MAP</h1>
+        <p>INTO THE QUARTER CENTURY</p>
+    </header>
+
+    <div class="container">
+        <div class="lhs-goals">
+            <div class="goal" data-goal-id="1">Graduate Opportunities</div>
+            <div class="goal" data-goal-id="2">Savings and Money Management</div>
+            <div class="goal" data-goal-id="3">Health and Wellness</div>
+            <div class="goal" data-goal-id="4">Financial Engineering Project</div>
+            <div class="goal" data-goal-id="5">Distinction MSc</div>
+            <div class="goal" data-goal-id="6">Friendships</div>
+            <div class="goal" data-goal-id="7">Faith</div>
+            <div class="goal" data-goal-id="8">Self-Confidence</div>
+            <div class="goal" data-goal-id="9">Writing Project 1</div>
+            <div class="goal" data-goal-id="10">Writing Project 2</div>
+            <div class="goal" data-goal-id="11">Developmental Activities</div>
+        </div>
+
+        <div class="rhs-details" id="goal-details">
+            <p>Select a goal from the left to view details here.</p>
+        </div>
+    </div>
+
+    <script src="2025MilestoneMapping.js"></script>
+    <script>
+        // Load milestone states from localStorage when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const goals = document.querySelectorAll('.goal');
+            
+            goals.forEach(goal => {
+                const goalId = goal.getAttribute('data-goal-id');
+                if (localStorage.getItem(goalId) === 'true') {
+                    goal.classList.add('strikethrough');
+                }
+            });
+        });
+
+        // Add event listeners to toggle strike-through on milestones
+        document.querySelectorAll('.goal').forEach(goal => {
+            goal.addEventListener('click', function() {
+                const goalId = goal.getAttribute('data-goal-id');
+
+                // Toggle the strike-through effect
+                if (goal.classList.contains('strikethrough')) {
+                    goal.classList.remove('strikethrough');
+                    localStorage.setItem(goalId, 'false'); // Remove strike-through
+                } else {
+                    goal.classList.add('strikethrough');
+                    localStorage.setItem(goalId, 'true'); // Add strike-through
+                }
+            });
+        });
+    </script>
+</body>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</html>

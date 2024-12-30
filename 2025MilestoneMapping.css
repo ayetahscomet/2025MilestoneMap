@@ -1,0 +1,192 @@
+body {
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #01041c; 
+    color: #FFF; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+header {
+    background-color: transparent;
+    padding: 10px;
+    width: 110%;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+header h1 {
+    color: #7DC1FF; 
+    line-height: 1;
+    font-size:5rem;
+    text-shadow: 0 0 10px #A74899, 0 0 15px #D453D4; 
+}
+
+header p {
+    color: white; 
+    font-size: 2rem; 
+    line-height: 0;
+    text-shadow: 0 0 5px #08f673, 0 0 10px ; 
+}
+
+.headline-goals {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px #08f673;
+    font-size: 3rem; 
+    color: white; 
+    text-align: center;
+    text-shadow: 0 0 5px #A74899, 0 0 10px #D453D4; 
+}
+
+footer {
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #7DC1FF, 0 0 10px #32A673; 
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7DC1FF; 
+}
+
+.lhs-goals {
+    flex: 1;
+    background-color: #000000; 
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #FED737; 
+    box-shadow: 0 0 5px #7DC1FF; 
+}
+
+.goal {
+    font-family:'Helvetica';
+
+    background-color: #000000; 
+    color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #7DC1FF;
+    box-shadow: 0 0 5px #7DC1FF;
+}
+
+.goal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #FED737; 
+}
+
+.rhs-details {
+    flex: 3;
+    background-color: #000000; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #7DC1FF;
+}
+
+.routine-goal {
+        font-family:'Helvetica';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #263d64; 
+    border-radius: 8px;
+    border: 2px solid #7DC1FF; 
+    box-shadow: 0 0 5px #7DC1FF;
+    border: 2px solid #FED737;
+}
+
+.routine-goal:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px #7DC1FF; 
+}
+
+.dropdown {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem; 
+    padding: 10px 20px;
+    border: 2px solid #7DC1FF; 
+    border-radius: 10px;
+    background-color: #263d64; 
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    box-shadow: 0 0 5px #7DC1FF;
+}
+
+.dropdown:hover {
+    background-color: #2c3e50; 
+    border-color: #D453D4; 
+}
+
+.milestone {
+    font-family:'Helvetica';
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #263d64;
+    border: 2px solid #7DC1FF;
+    border-radius: 7px;
+    text-align: left;
+    font-size: large;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 5px #7DC1FF;
+    cursor: pointer;
+}
+
+.milestone:hover {
+    background-color: #6b036e; 
+    transform: scale(1.02);
+}
+
+.milestone.completed {
+    text-decoration: line-through;
+    color: grey;
+    background-color: #f0f0f0;
+}
+
+.milestone.hidden {
+    display: none;
+}
+
+.milestone.revealed {
+    display: block;
+}
+
+.glow-text {
+    text-shadow: 0 0 5px #7DC1FF, 0 0 10px #A74899;
+}
+
+.accent {
+    color: #FED737;
+    text-shadow: 0 0 5px #7DC1FF;
+}
+.goal {
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: grey;
+}
